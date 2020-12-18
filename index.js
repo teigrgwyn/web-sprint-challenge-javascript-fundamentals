@@ -77,7 +77,9 @@ For example: ['jackal, asiatic', .....]
 */
 
 function lowerCaseNames(array){
-  return array.map(item => item.toLowerCase());
+  const namesArr = [];
+  array.forEach(element => namesArr.push(element.animal_name.toLowerCase()));
+  return array.map(name => name.animal_name.toLowerCase());
 }
 
 
@@ -86,8 +88,8 @@ The zoo is concerned about animals with a lower population count.
 Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
 */
 
-function lowPopulationAnimals(/*Your Code Here*/){
-  /*Your Code Here*/
+function lowPopulationAnimals(array){
+  return array.filter(obj => (obj.population < 5));
 }
 
 
@@ -97,8 +99,11 @@ Using USApop find the total population from the zoos array using the .reduce() m
 Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
 */
 
-function USApop(/*Your Code Here*/){
-  /*Your Code Here*/
+function USApop(array){
+  let count = array.reduce((acc, obj) => {
+    return acc + obj.population;
+  },0)
+  return count;
 }
 
 
