@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 /*
-  
+  Closure; internal isn't closed until line 15, so we have access to it until line 15 (including anything nested); the nested function is a child to myFunction and inherits the variable
 */
 
 
