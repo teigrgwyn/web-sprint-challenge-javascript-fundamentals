@@ -61,8 +61,12 @@ Use animalNames to populate and return the displayNames array with only the anim
 displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
 */
 
-function animalNames(/*Your Code Here*/){
-  /*Your Code Here*/
+function animalNames(array){
+  const displayNames = [];
+  array.forEach(el => {
+    displayNames.push(`name: ${el.animal_name}, scientific: ${el.scientific_name}`);
+  });
+  return displayNames;
 }
 
 
@@ -72,8 +76,8 @@ Using lowerCaseNames use .map() to create a new array of strings with the animal
 For example: ['jackal, asiatic', .....]
 */
 
-function lowerCaseNames(/*Your Code Here*/){
-  /*Your Code Here*/
+function lowerCaseNames(array){
+  return array.map(item => item.toLowerCase());
 }
 
 
